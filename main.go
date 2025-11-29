@@ -18,11 +18,36 @@ import (
 	"fmt"
 
 	"github.com/PauloHPMKT/udemy-golang/pacotes"
+	tiposdedados "github.com/PauloHPMKT/udemy-golang/tiposDeDados"
+	"github.com/PauloHPMKT/udemy-golang/variaveis"
+
+	/**
+	Importando um pacote externo (terceiros)
+	Para importar pacotes externos, você precisa primeiro instalá-los usando o comando "go get <url-do-pacote>". Ex:
+	go get github.com/badoux/checkmail
+
+	Depois de instalado, você pode importar o pacote no seu código e utilizá-lo normalmente.
+	ou utilizar o comando "go mod tidy" que irá baixar todas as dependências declaradas no arquivo go.mod e go.sum
+	A utilização desse comando é recomendada sempre que você adicionar ou remover pacotes do seu projeto.
+	*/
+	"github.com/badoux/checkmail"
 )
 
 func main() {
 	fmt.Println("Hello, World!")
 	pacotes.WriteMessage()
+
+	// Utilizando o pacote externo checkmail para validar o formato de um e-mail
+	error := checkmail.ValidateFormat("teste@mail.com")
+	if error != nil {
+		fmt.Println("E-mail inválido")
+	}
+
+	variaveis.Variables()
+	tiposdedados.Numeros()
+	tiposdedados.Chars()
+	tiposdedados.Booleanos()
+	tiposdedados.ErrorTypes()
 }
 
 /**
