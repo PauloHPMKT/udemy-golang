@@ -17,6 +17,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/PauloHPMKT/udemy-golang/funcoes"
 	"github.com/PauloHPMKT/udemy-golang/pacotes"
 	tiposdedados "github.com/PauloHPMKT/udemy-golang/tiposDeDados"
 	"github.com/PauloHPMKT/udemy-golang/variaveis"
@@ -48,6 +49,8 @@ func main() {
 	tiposdedados.Chars()
 	tiposdedados.Booleanos()
 	tiposdedados.ErrorTypes()
+
+	funcoes.Execute()
 }
 
 /**
